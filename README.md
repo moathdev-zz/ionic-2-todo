@@ -1,6 +1,6 @@
 # ionic-2-todo
 
-To do app i hope that will help new ionic developers to get know ionic .
+To do app will help new ionic developers to get know ionic 2 .
 
 ##Installation
 
@@ -9,18 +9,22 @@ install the latest Cordova and Ionic command-line tools in your terminal. Follow
 
 ````
 npm install -g cordova ionic
+
 ````
 
 Install dependencies
 
 ````
+
 npm install
+
 ````
 
 
 ## Run To do App
 
 ````
+
 ionic serve --lab
 
 ````
