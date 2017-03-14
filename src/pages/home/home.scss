@@ -1,3 +1,18 @@
-page-home {
+.high{
+  border-left: 2px solid red;
+  padding-left: 4px;
+}
 
+.mdeium{
+  border-left: 2px solid yellow;
+  padding-left: 4px;
+}
+
+.low{
+  border-left: 2px solid green;
+  padding-left: 4px;
+}
+
+.done{
+   text-decoration: line-through;
 }

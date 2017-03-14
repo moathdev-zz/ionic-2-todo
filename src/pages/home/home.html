@@ -1,14 +1,40 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar color='light'>
+        <ion-title>
+            To Do App
+        </ion-title>
+
+        <ion-buttons end>
+            <button ion-button icon-only (click)="createTask()">
+                <ion-icon color="primary" name="add-circle"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+
+<ion-content>
+    <ion-list>
+        <ion-item-sliding *ngFor="let task of tasks">
+            <ion-item>
+                <ion-label>
+                    <h2 ngClass="{{ task.status }}"> {{ task.task }} </h2>
+                    <p ngClass="{{ task.priority }}"> {{ task.priority }} </p>
+                </ion-label>
+                <ion-toggle></ion-toggle>
+            </ion-item>
+            <ion-item-options side="right">
+                <button ion-button (click)="editTask(task)">
+                    <ion-icon ios="ios-clipboard" md="md-clipboard"></ion-icon>
+                    Edit
+                </button>
+                <button color="danger" ion-button (click)="deleteTask(task)">
+                    <ion-icon ios="ios-trash" md="md-trash"></ion-icon>
+                    Delete
+                </button>
+            </ion-item-options>
+
+        </ion-item-sliding>
+    </ion-list>
 </ion-content>
